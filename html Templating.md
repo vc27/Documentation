@@ -21,22 +21,26 @@ The purpose of .outer-wrap is to allow for a global class incase of a need to ta
 _usage: optional_  
 Section class is an optional class that will probably not get used very often due to the fact that sections typically large blocks of html that are note repeated in a way that a section class is needed.
 
-It is included in this outline in order to provide an optional class to span large portions of html.
+It is included in this outline in order to provide an optional class to span large portions of html. A few example of section-class would be: section-videos, section-galleries, section-tour-dates
 
 **.inner-wrap**  
 The purpose of .inner-wrap is to allow for a section wrapper that utilize max-width or specific width to be given to a #section-name with out confining the #section-name to a width. Now #section-width can extend to 100% of the page while it's .inner-wrap can be "max-width:960px;".
 
 **.row-fluid**  
 _usage: bootstrap-responsive, optional, recommended for columns_  
+row-fluid is a class from the bootstrap fluid responsive css file. It's purpose is to allow for rows of block content with columns that will flow within different size browser windows.
 
 **#{block-name}**  
 _usage: optional_  
+The purpose of block name is to allow for id targeting of select blocks of code that reside with in a section. Some blocks may be re-used on various pages. If a block is added via require or include than the block name should use the same name as the file.
 
 **.span{number}**  
 _usage: bootstrap-responsive, optional, recommended for columns_  
+span{number} is a class from the bootstrap fluid responsive css file. It's purpose is to allow for columns to be added in a way that can be fluid within various browser widths.
 
 **.{block-class}**  
 _usage: optional, recommended_  
+The purpose of block class is to allow for reusable block styling. A few examples of block-class would be: layout-featured-content, layout-featured-video, layout-grid, layout-gallery
 
 **.inside-wrapper**  
 _usage: optional, recommended_  
@@ -70,27 +74,32 @@ This is a globalized class that allows for the obvious usage through out all "lo
 
 **.loop-{type}**  
 _usage: optional, recommended_  
-This class allows for specific loop types to overwrite "loop". It also allows for targeting div's with out using id's.
+This class allows for specific loop types to overwrite "loop". It also allows for targeting div's with out using id's. A few example of loop-{type} would be: loop-posts, loop-pages, loop-events, loop-video
 
 **.hentry**  
+hentry refers to an individual item with in a loop. "item" would be a better term, but hentry has been used more often so it will remain in place.
 
 **.hentry-{type}**  
-_usage: optional, recommended_
+_usage: optional, recommended_  
+The purpose of hentry type to allow for various item types to exist with in a single loop and retain various styles.
 
 **h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .etc**  
-_usage: optional, recommended_
+_usage: optional, recommended_  
+The purpose of an h1 class, and the other h classes, is to allow for the use of h styles with out using the h tags. 
 
 **.entry**  
+The purpose of the entry class is to wrap the general html content.
 
 **.meta-data**  
+The purpose of the meta-data class is to wrap append data to a block. Many times there is meta-data before and after the entry, this class allows you to maintain the styles for both.
 
 **.meta-data-{type}**  
-_usage: optional, recommended_
-
-**.meta-item**  
+_usage: optional, recommended_  
+The purpose of the meta-data-type is to target specific type of meta-data that may be re-used in various locations, but require small tweaks from the parent meta-data class.
 
 **.meta-item-{type}**  
-_usage: optional, recommended_
+_usage: optional, recommended_  
+The purpose of the meta-item-type is to target specific items for styles.
 
 ```
 <div id="{block-name}" class="loop loop-{type}">
@@ -99,7 +108,7 @@ _usage: optional, recommended_
 			<div class="h1">Title</div>
 			<div class="entry">Text here</div>
 			<div class="meta-data meta-data-{type}">
-				<div class="meta-item meta-item-{type}">category</div>
+				<div class="meta-item-{type}">category</div>
 			</div>
 		</div>
 	</div>
