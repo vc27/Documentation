@@ -77,17 +77,20 @@ This class allows for specific loop types to overwrite "loop". It also allows fo
 **.hentry-{type}**  
 _usage: optional, recommended_
 
-**h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .etc**
+**h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .etc**  
+_usage: optional, recommended_
 
-**.entry**
+**.entry**  
 
-**.meta-data**
+**.meta-data**  
 
-**.meta-data-{type}**
+**.meta-data-{type}**  
+_usage: optional, recommended_
 
-**.meta-item**
+**.meta-item**  
 
-**.meta-item-{type}**
+**.meta-item-{type}**  
+_usage: optional, recommended_
 
 ```
 <div id="{block-name}" class="loop loop-{type}">
@@ -104,6 +107,16 @@ _usage: optional, recommended_
 ```
 
 ### Abstract
+Abstract is a method for quick nondescript usage. It's a method for adding block elements that do not require 
+
+**.wrapper**  
+
+**.head**  
+
+**.body**  
+
+**.foot**  
+
 ```
 <div class="wrapper">
 	<div class="head"></div>
