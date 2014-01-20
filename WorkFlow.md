@@ -1,5 +1,12 @@
-Workflow outline
+Workflow
 ====================
+
+Notes:
+--------------------
+The following outline is based on a production environment where the developer is brought in after the preliminary site outlines and design have been completed and approved.
+
+Outline:
+--------------------
 
 ### Design files
 - Collect all design files from designer. 
