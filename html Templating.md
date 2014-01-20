@@ -30,11 +30,12 @@ The purpose of .inner-wrap is to allow for a section wrapper that utilize max-wi
 _usage: bootstrap-responsive, optional, recommended for columns_  
 
 **#{block-name}**  
+_usage: optional_  
 
 **.span{number}**  
 _usage: bootstrap-responsive, optional, recommended for columns_  
 
-**.{section-class}**  
+**.{block-class}**  
 _usage: optional, recommended_  
 
 **.inside-wrapper**  
@@ -46,7 +47,7 @@ The purpose of .inner-wrap is to allow for a block wrapper that utilizes padding
 <div id="{section-name}" class="outer-wrap {section-class}">
 	<div class="inner-wrap">
 		<div class="row-fluid">
-			<div id="block-name" class="span8 block-class">
+			<div id="{block-name}" class="span8 {block-class}">
 				<div class="inside-wrapper">
 					<p>Some html here</p>
 				</div>
@@ -64,23 +65,38 @@ The purpose of .inner-wrap is to allow for a block wrapper that utilizes padding
 ### Loop
 Loops follow the same basic concept as a standard block.
 
-**#block-name**
-Block name
-
 **.loop**  
 This is a globalized class that allows for the obvious usage through out all "loops" with in a project.
 
 **.loop-{type}**  
+_usage: optional, recommended_  
 This class allows for specific loop types to overwrite "loop". It also allows for targeting div's with out using id's.
 
+**.hentry**  
+
+**.hentry-{type}**  
+_usage: optional, recommended_
+
+**h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .etc**
+
+**.entry**
+
+**.meta-data**
+
+**.meta-data-{type}**
+
+**.meta-item**
+
+**.meta-item-{type}**
+
 ```
-<div id="block-name" class="loop loop-{type}">
+<div id="{block-name}" class="loop loop-{type}">
 	<div class="inside-wrapper">
 		<div class="hentry hentry-{type}">
 			<div class="h1">Title</div>
 			<div class="entry">Text here</div>
-			<div class="meta-data">
-				<div class="meta-item">category</div>
+			<div class="meta-data meta-data-{type}">
+				<div class="meta-item meta-item-{type}">category</div>
 			</div>
 		</div>
 	</div>
