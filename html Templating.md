@@ -17,7 +17,8 @@ Section name is what you would think, it refers to the "section" of the specific
 **.outer-wrap**  
 The purpose of .outer-wrap is to allow for a global class incase of a need to target all top level div's.
 
-**.{section-class} _optional_**  
+**.{section-class}**  
+_Usage: optional_  
 Section class is an optional class that will probably not get used very often due to the fact that sections typically large blocks of html that are note repeated in a way that a section class is needed.
 
 It is included in this outline in order to provide an optional class to span large portions of html.
@@ -25,15 +26,19 @@ It is included in this outline in order to provide an optional class to span lar
 **.inner-wrap**  
 The purpose of .inner-wrap is to allow for a section wrapper that utilize max-width or specific width to be given to a #section-name with out confining the #section-name to a width. Now #section-width can extend to 100% of the page while it's .inner-wrap can be "max-width:960px;".
 
-**.row-fluid _bootstrap-responsive, optional, recommended for columns_**
+**.row-fluid**  
+_Usage: bootstrap-responsive, optional, recommended for columns_  
 
-**#{block-name}**
+**#{block-name}**  
 
-**.span{number} _bootstrap-responsive, optional, recommended for columns_**
+**.span{number}**  
+_Usage: bootstrap-responsive, optional, recommended for columns_  
 
-**.{section-class} _optional, recommended_**
+**.{section-class}**  
+_Usage: optional, recommended_  
 
-**.inside-wrapper _optional, recommended_**  
+**.inside-wrapper**  
+_Usage: optional, recommended_  
 The purpose of .inner-wrap is to allow for a block wrapper that utilizes padding on a block that has a set width.
 
 **section-name.php**
