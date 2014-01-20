@@ -1,12 +1,12 @@
 ChangeLog
 ====================
 
-== 1.0.1 ==
+01.20.14 - 1.0.0 -> 1.0.2
 --------------------
-### 01.20.14
+- initial commit
+
+### 01
 - update workflow to include notes
 
-== 1.0.0 ==
---------------------
-### 01.20.14
-- initial commit
+### 02
+- add WP Decoupled Functionality document
