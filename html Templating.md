@@ -11,13 +11,13 @@ html
 ### Standard Block
 The following code block allows for re-usable "class" targeting as well as id overwrites. 
 
-**.outer-wrap**
+**.outer-wrap**  
 The purpose of .outer-wrap is to allow for a global class incase of a need to target all top level div's.
 
-**.inner-wrap**
+**.inner-wrap**  
 The purpose of .inner-wrap is to allow for a section wrapper that utilize max-width or specific width to be given to a #section-name with out confining the #section-name to a width. Now #section-width can extend to 100% of the page while it's .inner-wrap can be "max-width:960px;".
 
-**.inside-wrapper**
+**.inside-wrapper**  
 The purpose of .inner-wrap is to allow for a block wrapper that utilizes padding on a block that has a set width.
 
 ```
