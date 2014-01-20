@@ -9,7 +9,7 @@ html
 --------------------
 
 ### Standard Block
-`
+```
 <div id="block-name" class="outer-wrap section-class">
 	<div class="inner-wrap">
 		<div class="row-fluid">
@@ -19,10 +19,10 @@ html
 		</div>
 	</div>
 </div>
-`
+```
 
 ### Loop
-`
+```
 <div id="file-name" class="loop loop-{type}">
 	<div class="inside-wrapper">
 		<div class="item item-{type}">
@@ -34,13 +34,13 @@ html
 		</div>
 	</div>
 </div>
-`
+```
 
 ### Abstract
-`
+```
 <div class="wrap">
 	<div class="head"></div>
 	<div class="body"></div>
 	<div class="foot"></div>
 </div>
-`
+```
