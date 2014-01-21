@@ -32,7 +32,7 @@ Most addons are a part of a greater cms. In this instance they should utilize cm
 Attached to this documentation is a folder that contains a default version of the "addons" folder with the addon starter "AddonStarter" that includes the necessary files for an addon. 
 
 **dir/addons**
-- initiate-addons.php
+- [initiate-addons.php](addons/initiate-addons.php)
 - AddonStarter/
 
 **dir/AddonStarter**
