@@ -33,10 +33,10 @@ Attached to this documentation is a folder that contains a default version of th
 
 **dir/addons**
 - [initiate-addons.php](addons/initiate-addons.php)
-- AddonStarter/
+- [AddonStarter/](addons/AddonStarter)
 
 **dir/AddonStarter**
-- change-log.md
-- initiate.php
-- ClassName.php
-- ClassNameWP.php
+- [change-log.md](addons/AddonStarter/change-log.md)
+- [initiate.php](addons/AddonStarter/initiate.php)
+- [ClassName.php](addons/AddonStarter/ClassName.php)
+- [ClassNameWP.php](addons/AddonStarter/ClassNameWP.php)
