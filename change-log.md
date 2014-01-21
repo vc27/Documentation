@@ -3,6 +3,7 @@ ChangeLog
 
 ### 01.21.14 - 1.0.1
 - added "addons" folder with initiate and AddonStarter package
+- add readme files to addons and AddonStarter
 
 ### 01.20.14 - 1.0.0
 - initial commit
