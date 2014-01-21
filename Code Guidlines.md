@@ -13,7 +13,7 @@ An addon can be a single file or a folder of files that perform a specific funct
 ### Addons directory
 In this documentation we assume that the cms does not have a library initiation process or auto loading. The process described blow is more manual than it needs to be, but it is in place to assure usability in all environments. This process is also used in order to keep it _simple_.
 
-The addons directory will consist of on file. initiate-addons.php With in that file you will find all the includes wrapped within an if statement that checks for a constant. This process ensures that the code is not added twice.
+The addons directory will consist of one file: initiate-addons.php. Within that file you will find all the includes wrapped within an if statement which checks for a constant. This process ensures that the code is not added twice.
 
 ### Addons follow a design pattern
 Each addon should follow the same design pattern.
@@ -22,12 +22,21 @@ Each addon should follow the same design pattern.
 - folder name
 - initiate.php
 - check for initiation
-- settings class (optional)
+- settings class _optional_
 - required files
 
-Addons as a CMS
-Most addons are a part of a greater cms. In this instance they should utilize cms functionality rather than reinventing the wheel.
+### Addons as a CMS
+Most addons are a part of a greater cms. In this instance they should utilize cms functionality rather than reinventing the wheel. Addons should also utilize any filtering system that is available as well as present it's own filters so other addons may manipulate or add
 
-WP Code is inserted in production using proper hooks and filters
-The WordPress cms come with a hook and filter system which should be utilized at key points. This will enable other addons to hook in and make changes when necessary. Code added to WordPress should utilize proper hooks and filters such as init, admin_init, wp_head and various others.
+### AddonStarter
+Attached to this documentation is a folder that contains a default version of the "addons" folder with the addon starter "AddonStarter" that includes the necessary files for an addon. 
 
+**dir/addons**
+- initiate-addons.php
+- AddonStarter/
+
+**dir/AddonStarter**
+- change-log.md
+- initiate.php
+- ClassName.php
+- ClassNameWP.php
