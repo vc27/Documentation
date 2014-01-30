@@ -3,7 +3,7 @@ Code Guidelines
 
 Notes:
 --------------------
-These guidelines are intended for an OOP decoupled approach to adding functionality repetitive manner. The goal is speed production and create reusable code for future use.
+These guidelines are intended for an OOP decoupled approach to adding functionality repetitive manner. The goal is to speed production and create reusable code for future use.
 
 Some projects may not have enough allotted time in the budget for clean reusable code, however this approach supplies a template and a formula that will allow for easier refactoring.
 
