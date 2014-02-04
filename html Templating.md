@@ -133,3 +133,16 @@ Abstract is a method for quick nondescript usage. It's a method for adding block
 	<div class="foot"></div>
 </div>
 ```
+
+### Responsive tier widths
+
+- 1600
+- 1280
+- 1080
+- 1024
+- 800
+- 768
+- 600
+- 568
+- 480
+- 320

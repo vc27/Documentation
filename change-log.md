@@ -1,6 +1,9 @@
 ChangeLog
 ====================
 
+### 02.04.14 - 1.0.2
+- add responsive tier widths
+
 ### 01.21.14 - 1.0.1
 - added "addons" folder with initiate and AddonStarter package
 - add readme files to addons and AddonStarter
