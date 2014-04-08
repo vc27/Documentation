@@ -140,6 +140,7 @@ Abstract is a method for quick nondescript usage. It's a method for adding block
 - 1280
 - 1080
 - 1024
+- 960
 - 800
 - 768
 - 600
