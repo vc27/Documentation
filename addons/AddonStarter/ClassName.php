@@ -1,10 +1,9 @@
 <?php
 /**
- * File Name ClassName.php
+ * @package WordPress
  * @subpackage ProjectName
  * @license GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @version 1.0
- * @updated 00.00.00
+ * @since 0.0.0
  **/
 ####################################################################################################
 
@@ -14,9 +13,7 @@
 
 /**
  * ClassName
- *
- * @version 1.0
- * @updated 00.00.00
+ * @since 0.0.0
  **/
 class ClassName {
 	
@@ -27,8 +24,7 @@ class ClassName {
 	 * 
 	 * @access public
 	 * @var string
-	 * Description:
-	 * Used for various purposes when an import may be adding content to an option.
+	 * @since 0.0.0
 	 **/
 	var $option_name = false;
 	
@@ -39,8 +35,20 @@ class ClassName {
 	 * 
 	 * @access public
 	 * @var array
+	 * @since 0.0.0
 	 **/
 	var $errors = array();
+	
+	
+	
+	/**
+	 * have_errors
+	 * 
+	 * @access public
+	 * @var bool
+	 * @since 0.0.0
+	 **/
+	var $have_errors = 0;
 	
 	
 	
@@ -49,9 +57,7 @@ class ClassName {
 	
 	/**
 	 * __construct
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function __construct() {
 
@@ -64,9 +70,7 @@ class ClassName {
 	
 	/**
 	 * set
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function set( $key, $val = false ) {
 		
@@ -83,15 +87,32 @@ class ClassName {
 	
 	/**
 	 * error
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function error( $error_key ) {
 		
 		$this->errors[] = $error_key;
 		
 	} // end function error
+	
+	
+	
+	
+	
+	
+	/**
+	 * get
+	 * @since 0.0.0
+	 **/
+	function get( $key ) {
+		
+		if ( isset( $key ) AND ! empty( $key ) AND isset( $this->$key ) AND ! empty( $this->$key ) ) {
+			return $this->$key;
+		} else {
+			return false;
+		}
+		
+	} // end function get
 	
 	
 	
@@ -111,13 +132,11 @@ class ClassName {
 	
 	/**
 	 * example_function
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function example_function() {
 		
-		// sss
+		// example_function
 		
 	} // end function example_function
 	
@@ -138,22 +157,20 @@ class ClassName {
 	
 	
 	/**
-	 * have_something
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * have_errors
+	 * @since 0.0.0
 	 **/
-	function have_something() {
+	function have_errors() {
 		
-		if ( isset( $this->something ) AND ! empty( $this->something ) ) {
-			$this->set( 'have_something', 1 );
+		if ( isset( $this->errors ) AND ! empty( $this->errors ) AND is_array( $this->errors ) ) {
+			$this->set( 'have_errors', 1 );
 		} else {
-			$this->set( 'have_something', 0 );
+			$this->set( 'have_errors', 0 );
 		}
 		
-		return $this->have_something;
+		return $this->have_errors;
 		
-	} // end function have_something
+	} // end function have_errors
 	
 	
 	

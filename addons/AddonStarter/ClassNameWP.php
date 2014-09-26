@@ -1,11 +1,9 @@
 <?php
 /**
- * File Name ClassName.php
  * @package WordPress
  * @subpackage ProjectName
  * @license GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @version 1.0
- * @updated 00.00.00
+ * @since 0.0.0
  **/
 ####################################################################################################
 
@@ -15,9 +13,7 @@
 
 /**
  * ClassName
- *
- * @version 1.0
- * @updated 00.00.00
+ * @since 0.0.0
  **/
 class ClassName {
 	
@@ -28,8 +24,7 @@ class ClassName {
 	 * 
 	 * @access public
 	 * @var string
-	 * Description:
-	 * Used for various purposes when an import may be adding content to an option.
+	 * @since 0.0.0
 	 **/
 	var $option_name = false;
 	
@@ -40,8 +35,20 @@ class ClassName {
 	 * 
 	 * @access public
 	 * @var array
+	 * @since 0.0.0
 	 **/
 	var $errors = array();
+	
+	
+	
+	/**
+	 * have_errors
+	 * 
+	 * @access public
+	 * @var bool
+	 * @since 0.0.0
+	 **/
+	var $have_errors = 0;
 	
 	
 	
@@ -50,20 +57,13 @@ class ClassName {
 	
 	/**
 	 * __construct
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function __construct() {
 
-		// hook method after_setup_theme
-		add_action( 'after_setup_theme', array( &$this, 'after_setup_theme' ) );
-
-		// hook method init
-		add_action( 'init', array( &$this, 'init' ) );
-
-		// hook method admin_init
-		add_action( 'admin_init', array( &$this, 'admin_init' ) );
+		// add_action( 'after_setup_theme', array( &$this, 'after_setup_theme' ) );
+		// add_action( 'init', array( &$this, 'init' ) );
+		// add_action( 'admin_init', array( &$this, 'admin_init' ) );
 
 	} // end function __construct
 	
@@ -74,11 +74,7 @@ class ClassName {
 	
 	/**
 	 * after_setup_theme
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
-	 *
-	 * @codex http://codex.wordpress.org/Plugin_API/Action_Reference/after_setup_theme
+	 * @since 0.0.0
 	 **/
 	function after_setup_theme() {
 		
@@ -93,13 +89,7 @@ class ClassName {
 	
 	/**
 	 * init
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
-	 * @codex http://codex.wordpress.org/Plugin_API/Action_Reference/init
-	 * 
-	 * Description:
-	 * Runs after WordPress has finished loading but before any headers are sent.
+	 * @since 0.0.0
 	 **/
 	function init() {
 		
@@ -114,15 +104,7 @@ class ClassName {
 	
 	/**
 	 * admin_init
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
-	 * @codex http://codex.wordpress.org/Plugin_API/Action_Reference/admin_init
-	 * 
-	 * Description:
-	 * admin_init is triggered before any other hook when a user access the admin area.
-	 * This hook doesn't provide any parameters, so it can only be used to callback a 
-	 * specified function.
+	 * @since 0.0.0
 	 **/
 	function admin_init() {
 		
@@ -137,9 +119,7 @@ class ClassName {
 	
 	/**
 	 * set
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function set( $key, $val = false ) {
 		
@@ -156,9 +136,7 @@ class ClassName {
 	
 	/**
 	 * error
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function error( $error_key ) {
 		
@@ -173,9 +151,7 @@ class ClassName {
 	
 	/**
 	 * get
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function get( $key ) {
 		
@@ -205,9 +181,7 @@ class ClassName {
 	
 	/**
 	 * example_function
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * @since 0.0.0
 	 **/
 	function example_function() {
 		
@@ -232,22 +206,20 @@ class ClassName {
 	
 	
 	/**
-	 * have_something
-	 *
-	 * @version 1.0
-	 * @updated 00.00.00
+	 * have_errors
+	 * @since 0.0.0
 	 **/
-	function have_something() {
+	function have_errors() {
 		
-		if ( isset( $this->something ) AND ! empty( $this->something ) ) {
-			$this->set( 'have_something', 1 );
+		if ( isset( $this->errors ) AND ! empty( $this->errors ) AND is_array( $this->errors ) ) {
+			$this->set( 'have_errors', 1 );
 		} else {
-			$this->set( 'have_something', 0 );
+			$this->set( 'have_errors', 0 );
 		}
 		
-		return $this->have_something;
+		return $this->have_errors;
 		
-	} // end function have_something
+	} // end function have_errors
 	
 	
 	

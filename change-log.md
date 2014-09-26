@@ -1,6 +1,9 @@
 ChangeLog
 ====================
 
+### 09.25.14 - 2.0
+- update class basics
+
 ### 02.04.14 - 1.0.2
 - add responsive tier widths
 
