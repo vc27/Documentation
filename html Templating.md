@@ -17,12 +17,6 @@ Section name is what you would think, it refers to the "section" of the specific
 **.outer-wrap**  
 The purpose of .outer-wrap is to allow for a global class incase of a need to target all top level div's.
 
-**.{section-class}**  
-_usage: optional_  
-Section class is an optional class that will probably not get used very often due to the fact that sections typically large blocks of html that are note repeated in a way that a section class is needed.
-
-It is included in this outline in order to provide an optional class to span large portions of html. A few example of section-class would be: section-videos, section-galleries, section-tour-dates
-
 **.inner-wrap**  
 The purpose of .inner-wrap is to allow for a section wrapper that utilize max-width or specific width to be given to a #section-name with out confining the #section-name to a width. Now #section-width can extend to 100% of the page while it's .inner-wrap can be "max-width:960px;".
 
@@ -30,33 +24,27 @@ The purpose of .inner-wrap is to allow for a section wrapper that utilize max-wi
 _usage: bootstrap-responsive, optional, recommended for columns_  
 row-fluid is a class from the bootstrap fluid responsive css file. It's purpose is to allow for rows of block content with columns that will flow within different size browser windows.
 
-**#{block-name}**  
-_usage: optional_  
-The purpose of block name is to allow for id targeting of select blocks of code that reside with in a section. Some blocks may be re-used on various pages. If a block is added via require or include than the block name should use the same name as the file.
-
 **.span{number}**  
 _usage: bootstrap-responsive, optional, recommended for columns_  
 span{number} is a class from the bootstrap fluid responsive css file. It's purpose is to allow for columns to be added in a way that can be fluid within various browser widths.
-
-**.{block-class}**  
-_usage: optional, recommended_  
-The purpose of block class is to allow for reusable block styling. A few examples of block-class would be: layout-featured-content, layout-featured-video, layout-grid, layout-gallery
 
 **.inside-wrapper**  
 _usage: optional, recommended_  
 The purpose of .inner-wrap is to allow for a block wrapper that utilizes padding on a block that has a set width.
 
 **section-name.php**
+
+
 ```
-<div id="{section-name}" class="outer-wrap {section-class}">
+<div id="{section-name}" class="outer-wrap">
 	<div class="inner-wrap">
 		<div class="row-fluid">
-			<div id="{block-name}" class="span8 {block-class}">
+			<div id="{section-block-name}" class="span8 {layout-style}">
 				<div class="inside-wrapper">
 					<p>Some html here</p>
 				</div>
 			</div>
-			<div id="block-name2" class="span4 block-class">
+			<div class="span4">
 				<div class="inside-wrapper">
 					<p>Some more html here</p>
 				</div>
@@ -66,22 +54,23 @@ The purpose of .inner-wrap is to allow for a block wrapper that utilizes padding
 </div>
 ```
 
-### Loop
-Loops follow the same basic concept as a standard block.
 
-**.loop**  
-This is a globalized class that allows for the obvious usage through out all "loops" with in a project.
+### Layouts
+Layout follow the same basic concept as a standard block.
 
-**.loop-{type}**  
+**.layout**  
+This is a globalized class that allows for the obvious usage through out all "layouts" with in a project.
+
+**.layout-{type}**  
 _usage: optional, recommended_  
-This class allows for specific loop types to overwrite "loop". It also allows for targeting div's with out using id's. A few example of loop-{type} would be: loop-posts, loop-pages, loop-events, loop-video
+This class allows for specific layout types to overwrite "layout". It also allows for targeting div's with out using id's. A few example of layout-{type} would be: layout-posts, layout-pages, layout-events, layout-video
 
 **.hentry**  
-hentry refers to an individual item with in a loop. "item" would be a better term, but hentry has been used more often so it will remain in place.
+hentry refers to an individual item with in a layout. "item" would be a better term, but hentry has been used more often so it will remain in place.
 
 **.hentry-{type}**  
 _usage: optional, recommended_  
-The purpose of hentry type to allow for various item types to exist with in a single loop and retain various styles.
+The purpose of hentry type to allow for various item types to exist with in a single layout and retain various styles.
 
 **h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .etc**  
 _usage: optional, recommended_  
@@ -97,16 +86,20 @@ The purpose of the meta-data class is to wrap append data to a block. Many times
 _usage: optional, recommended_  
 The purpose of the meta-data-type is to target specific type of meta-data that may be re-used in various locations, but require small tweaks from the parent meta-data class.
 
-**.meta-item-{type}**  
+**.item**  
+_usage: optional, recommended_  
+The purpose of the item is to group all items within meta-data
+
+**.item-{type}**  
 _usage: optional, recommended_  
 The purpose of the meta-item-type is to target specific items for styles.
 
 ```
-<div id="{block-name}" class="loop loop-{type}">
+<div id="{section-name}" class="layout-{type}">
 	<div class="inside-wrapper">
 		<div class="hentry hentry-{type}">
 			<div class="h1">Title</div>
-			<div class="entry">Text here</div>
+			<div class="entry"><p>Text here</p></div>
 			<div class="meta-data meta-data-{type}">
 				<div class="meta-item-{type}">category</div>
 			</div>
@@ -116,7 +109,7 @@ The purpose of the meta-item-type is to target specific items for styles.
 ```
 
 ### Abstract
-Abstract is a method for quick nondescript usage. It's a method for adding block elements that do not require 
+Abstract is a method for quick non-descript usage.
 
 **.wrapper**  
 
