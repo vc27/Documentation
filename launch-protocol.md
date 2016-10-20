@@ -1,4 +1,6 @@
 ### General Site Items
+This list is for a basic brochure wp site. It is a simple list of commonly overlooked items that will come back to haunt you later. Copy and paste this list into your PM tool and check them off as they have been confirmed as completed.
+
 - Click through and review every url on the site
 - Check requested Social Network links
 - Test all forms
