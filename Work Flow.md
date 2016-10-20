@@ -9,8 +9,8 @@ Outline:
 --------------------
 
 ### Design files
-- Collect all design files from designer. 
-- Designs should be declared approved or not approved. 
+- Collect all design files from designer.
+- Designs should be declared approved or not approved.
 - Note: From time to time designs will receive an update after approval, if this is the case than an email should be sent to the developer to check in and make sure they are working from the latest version.
 - If designer has appropriate time they should attempt to clean and organize the internal structure of the files.
 
@@ -23,7 +23,7 @@ Outline:
 - Kickoff meeting can be ran by anyone knowledgeable enough to translate the project.
 - Note: This is to allow translation of design and instructions on various aspects of the project.
 
-### *Tech specs
+### Tech specs
 - It is best to build an outline of tech specs during the kickoff meeting.
 - This outline will be referred to throughout the project as a reference point for project completion and time projections.
 
